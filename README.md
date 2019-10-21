@@ -22,14 +22,7 @@ O simbionte Venom personagem da Marvel nem sempre foi o inimigo do Homem-Aranha 
 ## Instalação/Infecção
 
 ``` bash
-curl https://github.com/gabriel-dantas98/klyntar/releases/download/0.0.2/colorls.tar 
-
-mv colorls /usr/bin/
-chmod +x /usr/bin/colorls
-
-colorls help
-
-colorls install
+curl -L https://raw.githubusercontent.com/gabriel-dantas98/klyntar/master/install.sh | bash
 ```
 
 ## Por trás dos panos 
