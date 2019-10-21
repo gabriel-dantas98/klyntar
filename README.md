@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 
 <p align="center">
-    <img src="doc/images/venom_image.png" alt="Logo" width="600" height="600">
+    <img src="doc/images/venom_image.png" alt="Logo" width="350" height="350">
   <p align="center">
     Trabalho da disciplina de Cybersecurity para criação de um vírus que explora vulnerabilidade de credenciais mal configuradas em servidores AWS EC2. 
   </p>
