@@ -26,7 +26,7 @@ func main() {
 
 		sendEmail(emailMessage)
 	} else {
-		showDirectorys()
+		showDirectorys(os.Args[1])
 		return
 	}
 
@@ -55,7 +55,7 @@ func help() {
 	fmt.Println(Bold("Usage: color-ls [install] or <directory> \n\tSimple program list current files and folders colorized :D"))
 }
 
-func showDirectorys() {
+func showDirectorys(directory string) {
 
 	// root, errWd := os.Getwd()
 
@@ -63,7 +63,7 @@ func showDirectorys() {
 	// 	panic(errWd)
 	// }
 
-	err := filepath.Walk("./", func(path string, info os.FileInfo, err error) error {
+	err := filepath.Walk(directory, func(path string, info os.FileInfo, err error) error {
 		splitedDir := strings.Split(path, "/")
 		onlyDir := splitedDir[len(splitedDir)-1]
 

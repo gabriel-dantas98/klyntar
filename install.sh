@@ -7,4 +7,5 @@ echo "Moving binary to /usr/bin/"
 sudo mv bin/color-ls /usr/bin/
 
 echo "Nice, you should start using color-ls :D"
+cls
 color-ls help
