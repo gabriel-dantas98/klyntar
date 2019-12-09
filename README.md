@@ -28,6 +28,6 @@ curl -L https://raw.githubusercontent.com/gabriel-dantas98/klyntar/master/instal
 ## Por trás dos panos 
 
  - Verifica se existe ~/.aws/credentials;
- - Scaneia todas as portas que estão abertas no host;
+ - Escaneia todas as portas que estão abertas no host;
  - Cria uma usuário na conta que a instância tem permissão;
  - Cria uma mensagem e envia por e-mail;
